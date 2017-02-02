@@ -1,0 +1,84 @@
+<div ng-if="!details">
+  <div class="ui active dimmer">
+    <div class="ui text loader"></div>
+  </div>
+</div>
+
+<div ng-if="details.Response==='True'">
+
+  <div class="ui grid centered">
+    <div class="four wide column">
+      <img alt="Poster" class="ui fluid image img-poster" ng-src="{{ details.Poster=='N/A' ? 'http://placehold.it/150x220&text=N/A' : details.Poster }}" />
+    </div>
+    <div class="ten wide column middle aligned text-left invert-text">
+
+      <h2>{{details.Title | uppercase}} </h2>
+      <i>({{details.Year}})</i>
+      <br/>
+      <br/>
+      <div class="ui grid two column">
+        <p class="column"><b>Genre:</b> {{details.Genre}}
+          <br/><b>Runtime:</b> {{details.Runtime}}</p>
+        <p class="column"><b>IMDb Rating:</b> {{details.imdbRating}}
+          <br/><b>Rotten Tomatoes:</b> {{details.tomatoRating}}</p>
+      </div>
+
+      <div class="hide-mob">
+        {{details.Plot}}
+      </div>
+
+    </div>
+  </div>
+
+  <br/>
+
+
+    <div class="ui grid stackable relaxed centered inverted segment no-borad">
+      <div class="ten wide column">
+
+        <div class="cont-pad show-mob">
+          <h3 class="ui horizontal divider header inverted">Plot</h3>
+          <p>{{details.Plot}}</p>
+        </div>
+
+        <div class="cont-pad">
+          <h3 class="ui horizontal divider header inverted">Actors</h3>
+          <p>{{details.Actors}}</p>
+        </div>
+
+        <div class="cont-pad">
+          <h3 class="ui horizontal divider header inverted">Directors</h3>
+          <p>{{details.Director}}</p>
+        </div>
+
+        <div class="cont-pad">
+          <h3 class="ui horizontal divider header inverted">Writers</h3>
+          <p>{{details.Writer}}</p>
+        </div>
+
+        <div class="cont-pad">
+          <h3 class="ui horizontal divider header inverted">Awards</h3>
+          <p>{{details.Awards}}</p>
+        </div>
+      </div>
+
+      <div class="four wide column" ng-include="'rel-results.html'">
+      </div>
+      <div class="ui divider row"></div>
+      <p class="column"></p>
+      <div class="sixteen wide column" ng-include="'rel-links.html'"></div>
+      <p class="column"></p>
+      <div class="ui divider row"></div>
+    </div>
+
+    <div class="footer" ng-include="'about.html'"></div>
+</div>
+
+
+<div ng-if="details.Response==='False'">
+  <div class="page-dimmed"><div class="ui inverted active indeterminate loader"></div></div>
+  <div class="fixed-pos-center">
+    <h2>No Results Found.</h2>
+  </div>
+</div>
+

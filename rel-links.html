@@ -1,0 +1,35 @@
+<div class="ui centered grid container">
+  <div class="doubling four column row">
+    <a class="column" ng-href="http://www.amazon.in/s/ref=nb_sb_noss_1?url=search-alias%3Ddvd&field-keywords={{ details.Title }}" target="_blank">
+      <div class="ui yellow inverted segment">
+        <h3 class="ui header">
+          Buy Now
+        </h3>
+      </div>
+    </a>
+
+    <a class="column" ng-href="https://www.youtube.com/results?search_query={{ details.Title }}" target="_blank">
+      <div class="ui yellow inverted segment">
+        <h3 class="ui header">
+          Trailers
+        </h3>
+      </div>
+    </a>
+
+    <a class="column" ng-href="http://subscene.com/subtitles/title?q={{ details.Title }}" target="_blank">
+      <div class="ui yellow inverted segment">
+        <h3 class="ui header">
+          Subtitles
+        </h3>
+      </div>
+    </a>
+
+    <a class="column" ng-href="http://www.theost.com/search/custom/?key={{ details.Title }}" target="_blank">
+      <div class="ui yellow inverted segment">
+        <h3 class="ui header">
+          Soundtracks
+        </h3>
+      </div>
+    </a>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div ng-if="related.Response!=='False'" class="cont-pad">
+  <h3 class="ui horizontal divider inverted header">Related Results</h3>
+
+  <div class="rel-results ui inverted divided list">
+    <div class="item" ng-repeat="x in related.Search">
+      <a id="{{ index+1 }}" href="#" ng-click="update(x)">{{ x.Title }}</a>, {{x.Year}}
+    </div>
+  </div>
+</div>
