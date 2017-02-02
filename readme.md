@@ -6,5 +6,5 @@ It basically illustrates the use of OMDb API along with Angular JS to make a web
 
 ### Installation
 Git clone and run from your browser
-Use virtual server if angular routing doesn't work
+*Use virtual server if angular routing doesn't work*
 
